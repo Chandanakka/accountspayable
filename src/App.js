@@ -48,7 +48,7 @@ class FormDataExample extends Component {
     formData.append('glimage', this.state.selectedImage);
 
     // Make a POST request to your Spring Boot API.
-    fetch('http://localhost:8080/AccountsPayable', {
+    fetch('http://192.168.0.179:8444/AccountsPayable', {
         method: 'POST',
         body: formData
     })
