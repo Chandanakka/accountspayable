@@ -48,7 +48,7 @@ class FormDataExample extends Component {
     formData.append('glimage', this.state.selectedImage);
 
     // Make a POST request to your Spring Boot API.
-    fetch('http://192.168.0.179:8444/AccountsPayable', {
+    fetch('http://192.168.0.179:8082/AccountsPayable', {
         method: 'POST',
         body: formData
     })
@@ -82,10 +82,10 @@ class FormDataExample extends Component {
     return (
       <div className="accounts-payables">
       <div className="transaction-form">
-       <div className="accounts-payables"><h2>ACCOUNTS PAYABLES</h2></div>
+       <div className="accounts-payables"><h2>GENERAL LEGER DEBITS</h2></div>
          <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label htmlFor="glvoucherno"><b> Voucher No:</b></label>
+            <label htmlFor="glvoucherno"><b> Voucher No/Invoice No:</b></label>
             <input className="form-control"
               type="text"
               id="glvoucherno"
@@ -103,7 +103,7 @@ class FormDataExample extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="glexpensetype"><b> Paid For:</b></label>
+            <label htmlFor="glexpensetype"><b> Invoice/Paid For:</b></label>
             <input className="form-control"
               type="text"
               id="glexpensetype"
@@ -112,7 +112,7 @@ class FormDataExample extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="glpaidto"><b>Paid To:</b></label>
+            <label htmlFor="glpaidto"><b>Invoice To/Paid To:</b></label>
             <input className="form-control"
               type="text"
               id="glpaidto"
@@ -121,7 +121,7 @@ class FormDataExample extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="glpaidamount"><b>Paid Amount:</b></label>
+            <label htmlFor="glpaidamount"><b>Invoice/Paid Amount:</b></label>
             <input className="form-control"
               type="number"
               id="glpaidamount"
@@ -130,7 +130,7 @@ class FormDataExample extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="glimage"><b>Voucher Image:</b></label>
+            <label htmlFor="glimage"><b>Invoice/Voucher Image:</b></label>
             <input className="form-control"
               type="file"
               id="glimage"
