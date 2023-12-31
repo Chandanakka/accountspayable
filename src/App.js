@@ -82,7 +82,7 @@ class FormDataExample extends Component {
     return (
       <div className="accounts-payables">
       <div className="transaction-form">
-       <div className="accounts-payables"><h2>GENERAL LEGER DEBITS</h2></div>
+       <div className="accounts-payables"><h2>GENERAL LEGER DEBITS-AP</h2></div>
          <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="glvoucherno"><b> Voucher No/Invoice No:</b></label>
